@@ -66,14 +66,22 @@ For Windows, [Python](https://www.python.org/downloads/) with [PIL](http://www.p
 Anyway, the PoC [website](http://cryptolok.darktech.org) is available.
 
 To stealth a file:
+
 1. Specify a JPEG image as a decoy
+
 2. Specify a file to stealth
+
 3. Retreive the output PNG image and the respective key
 
+
 To unstealth a file:
+
 1. Specify a PNG image as a decoy
+
 2. Specify an output file (not for the website)
+
 3. Specify a key or the original JPEG image (key only for the website)
+
 4. Retrieve the original file
 
 #### Notes
