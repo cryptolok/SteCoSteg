@@ -10,6 +10,7 @@ Properties:
 * compatibility/portability
 * white-box
 * key recovery/uniqueness
+* one-way/irreversibility
 
 Dependencies:
 * **Python** - main code, version 2 and 3 compatible
@@ -26,11 +27,11 @@ SteCoSteg operates images, JPEGs are used as a decoy. Then, it takes a file and 
 
 The key it-self is just an encoded pixels list that contains the file.
 
-So, SteCoSteg takes a file, decomposes it by bytes, and store these bytes in pixels of an image. The security is achieved by the determination of what pixel to use as a storage.
+So, SteCoSteg takes a file, decomposes it by bytes, and store these bytes in pixels of an image. The security is achieved by the determination of what pixel to use as a storage and by applying a one-way function.
 
 At this point, it does exactly the same thing as OutGuess, but differently.
 
-The technique is to find the pixels that are more entropic than the others, which basically means to find the least used colors and modify them.
+The technique is to find the pixels that are more entropic than the others, which basically means to find the least used colors and modify them irreversibly.
 
 Just like Vernam cipher and OutGuess, if SteCoSteg is well used, it will be mathematically impossible to extract the concealed information. This usage requires a highly entropic image (as photo) and relatively small amount of data to store. Bigger amount of storage is possible to conceal as well, but the more data is to be concealed, less stealthy it will be, thus it is not optimized for big amount of data concealement since, the respective decoy size is needed.
 
