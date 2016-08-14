@@ -1,7 +1,7 @@
 # SteCoSteg
 Steath Colors Steganography
 
-SteCoSteg is the OutGuess successor and the Vernam cipher analog in steganography.
+SteCoSteg is the OutGuesses' successor and the Vernams' cipher analog in steganography.
 
 Properties:
 * plausible deniability
