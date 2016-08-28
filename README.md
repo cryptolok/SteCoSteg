@@ -64,7 +64,6 @@ python SteCoSteg.py
 ```
 For Windows, [Python](https://www.python.org/downloads/) with [PIL](http://www.pythonware.com/products/pil/). Portable versions are not known to be functional.
 
-Anyway, the PoC [website](http://cryptolok.darktech.org) is available.
 
 To stealth a file:
 
