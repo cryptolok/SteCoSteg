@@ -78,9 +78,9 @@ To unstealth a file:
 
 1. Specify a PNG image as a decoy
 
-2. Specify an output file (not for the website)
+2. Specify an output file
 
-3. Specify a key or the original JPEG image (key only for the website)
+3. Specify a key or the original JPEG image
 
 4. Retrieve the original file
 
