@@ -187,7 +187,8 @@ def unstealth(decoy,file):
 	print('SAVED TO '+file)
 	print('')
 
-# some style
+# some style in purple
+print "\033[35m"
 print('')
 print('  	                 |         ')
 print('  	                / \        ')
