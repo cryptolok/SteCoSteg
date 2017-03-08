@@ -1,5 +1,5 @@
 # SteCoSteg
-Steath Colors Steganography
+Stealth Colors Steganography
 
 SteCoSteg is OutGuess successor and Vernam cipher analog in steganography.
 
