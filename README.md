@@ -20,6 +20,7 @@ Limitations:
 * images-only as decoy
 * not optimized for big files
 * relatively big key size
+* lossy convertion reformating is not supported (yet)
 
 ## How it works
 
