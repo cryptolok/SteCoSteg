@@ -150,8 +150,8 @@ def unstealth(decoy,file):
 			colors2List.sort()
 			colors2Sorted = [value[1] for value in colors2List]
 			difference=list(set(colorsSorted)-set(colors2Sorted))
-                        total=len(difference)
-                        for pixel in colors2Sorted:
+			total=len(difference)
+			for pixel in colors2Sorted:
                                 if total == 0:
                                         break
                                 total-=1
