@@ -118,6 +118,7 @@ def unstealth(decoy,file):
 	width, height = image.size
 	maxLength=max(len(hex(width))-2,len(hex(height))-2)
 	coordinates=[]
+	decoded=False
 # all we need, is to get the modified pixels in good order
 	try:
 		if not wasFile:
@@ -161,16 +162,17 @@ def unstealth(decoy,file):
                                          for y in range(height):
                                                  if recovery.getpixel((x,y))==pixel[0]:
                                                          coordinates.append((x,y))
+			decoded=True
 	except:
 		pass
+	if not decoded:
 # Base64 decoding
-	try:
+		try:
 # Python 2
-		key=b64decode(key).encode('hex')
-	except:
+			key=b64decode(key).encode('hex')
+		except:
 # Python 3
-		key=str(encode(b64decode(key),'hex'))[2:-1]
-	finally:
+			key=str(encode(b64decode(key),'hex'))[2:-1]
 		for i in range(int(len(key)/maxLength/2)):
 			coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1]+key[i*maxLength*2+2],16),int(key[i*maxLength*2+3]+key[i*maxLength*2+4]+key[i*maxLength*2+5],16)))
 	print('CONSTRUCTING FILE...')
