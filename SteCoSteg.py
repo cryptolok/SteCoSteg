@@ -150,14 +150,17 @@ def unstealth(decoy,file):
 			colors2List.sort()
 			colors2Sorted = [value[1] for value in colors2List]
 			difference=list(set(colorsSorted)-set(colors2Sorted))
-			for value in range(int(len(difference))):
-				difference[value]=difference[value][0]
-			for pixel in colorsSorted:
-				if pixel[0] in difference:
-					for x in range(width):
-						for y in range(height):
-							if image.getpixel((x,y)) == pixel[0]:
-								coordinates.append((x,y))
+#			for value in range(int(len(difference))):
+#				difference[value]=difference[value][0]
+			total=len(difference)
+			for pixel in colors2Sorted:
+                                 if total == 0:
+                                         break
+                                 total-=1
+                                 for x in range(width):
+                                         for y in range(height):
+                                                 if recovery.getpixel((x,y))==pixel[0]:
+                                                         coordinates.append((x,y))
 	except:
 		pass
 # Base64 decoding
@@ -167,8 +170,9 @@ def unstealth(decoy,file):
 	except:
 # Python 3
 		key=str(encode(b64decode(key),'hex'))[2:-1]
-	for i in range(int(len(key)/maxLength/2)):
-		coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1]+key[i*maxLength*2+2],16),int(key[i*maxLength*2+3]+key[i*maxLength*2+4]+key[i*maxLength*2+5],16)))
+	finally:
+		for i in range(int(len(key)/maxLength/2)):
+			coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1]+key[i*maxLength*2+2],16),int(key[i*maxLength*2+3]+key[i*maxLength*2+4]+key[i*maxLength*2+5],16)))
 	print('CONSTRUCTING FILE...')
 	print('')
 	for coordinate in coordinates:
