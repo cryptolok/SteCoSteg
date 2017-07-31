@@ -222,7 +222,7 @@ print('                                            __/ |')
 print('                                           |___/ ')
 print('')
 print('           Stealth Colors Steganography')
-print('')
+print("\033[0m")
 
 # since, input functions varie in Python 2 and 3, we have to find the good-one
 try:
