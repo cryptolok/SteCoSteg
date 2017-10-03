@@ -21,6 +21,7 @@ Limitations:
 * not optimized for big files
 * relatively big key size
 * lossy convertion reformating is not supported (yet)
+* remains sensible to noise/distortion
 
 ## How it works
 
