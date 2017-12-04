@@ -91,27 +91,25 @@ To unstealth a file:
 4. Retrieve the original file
 
 
-Example:
-
-	Stealthing:
-	```bash
-	./SteCoSteg.py
-	image.jpg
-	text.txt
-	```
+Stealthing Example:
+```bash
+./SteCoSteg.py
+image.jpg
+text.txt
+```
 	
-	Unstealthing:
-	```bash
-	text.txt.png
-	unstealthed.txt
-	___KEY___ (in my example - CVAmChBACvBEDgCw)
-	```
-	OR
-	```bash
-	text.txt.png
-	unstealthed.txt
-	image.jpg
-	```
+Unstealthing Example:
+```bash
+text.txt.png
+unstealthed.txt
+___KEY___ (in my example - CVAmChBACvBEDgCw)
+```
+OR
+```bash
+text.txt.png
+unstealthed.txt
+image.jpg
+```
 
 #### Notes
 
