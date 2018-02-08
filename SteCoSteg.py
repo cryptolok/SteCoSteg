@@ -174,7 +174,15 @@ def unstealth(decoy,file):
 # Python 3
 			key=str(encode(b64decode(key),'hex'))[2:-1]
 		for i in range(int(len(key)/maxLength/2)):
-			coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1]+key[i*maxLength*2+2],16),int(key[i*maxLength*2+3]+key[i*maxLength*2+4]+key[i*maxLength*2+5],16)))
+			if maxLength==1:
+                                coordinates.append((int(key[i*maxLength*2],16),int(key[i*maxLength*2+1],16)))
+                        elif maxLength==2:
+                                coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1],16),int(key[i*maxLength*2+2]+key[i*maxLength*2+3],16)))
+                        elif maxLength==3:
+                                coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1]+key[i*maxLength*2+2],16),int(key[i*maxLength*2+3]+key[i*maxLength*2+4]+key[i*maxLength*2+5],16)))
+                        else:
+                                coordinates.append((int(key[i*maxLength*2]+key[i*maxLength*2+1]+key[i*maxLength*2+2]+key[i*maxLength*2+3],16),int(key[i*maxLength*2+4]+key[i*maxLength*2+5]+key[i*maxLength*2+6]+key[i*maxLength*2+7],16)))
+# might be buggy with big images > 65Kx65K
 	print('CONSTRUCTING FILE...')
 	print('')
 	for coordinate in coordinates:
